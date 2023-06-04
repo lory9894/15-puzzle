@@ -2,14 +2,14 @@ window.onload = () => {
     freeTile = [3,3];
     dispose();
     setMovable();
-    document.getElementById("shufflebutton").onclick = shuffle;
+    shuffle();
 };
 
 let freeTile;
 let movable = []; //makes a lot easier to change css and check if those tiles can be moved
 
 function shuffle(){
-    let cicles = Math.random() * 100, tileIndex;
+    let cicles = Math.random() * 1000, tileIndex;
     //single moves, random
     for (let i = 0; i <cicles ; i++) {
         tileIndex = parseInt(Math.random() * movable.length);
@@ -121,11 +121,7 @@ function checkVictory(){
     }
 
     paragraph = document.createElement("p");
-    paragraph.innerText = "Congratulazioni hai vinto";
+    paragraph.innerText = "Congratulation, you won/Congratulazioni hai vinto";
     paragraph.id = "winner"
     document.getElementsByTagName("body")[0].insertBefore(paragraph,document.getElementById("w3c"));
-
-    setTimeout(function(){
-        window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    }, 5000);
 }

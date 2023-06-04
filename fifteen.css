@@ -30,7 +30,7 @@ p{
     color: red;
 }
 
-#winner{
+.winner{
     font-size: 20pt;
     font-style: normal;
     font-weight: bold;

@@ -9,7 +9,7 @@ let freeTile;
 let movable = []; //makes a lot easier to change css and check if those tiles can be moved
 
 function shuffle(){
-    let cicles = Math.random() * 1000, tileIndex;
+    let cicles = 1, tileIndex;
     //single moves, random
     for (let i = 0; i <cicles ; i++) {
         tileIndex = parseInt(Math.random() * movable.length);
@@ -120,8 +120,14 @@ function checkVictory(){
         positionColumn++;
     }
 
-    paragraph = document.createElement("p");
-    paragraph.innerText = "Congratulation, you won/Congratulazioni hai vinto";
-    paragraph.id = "winner"
-    document.getElementsByTagName("body")[0].insertBefore(paragraph,document.getElementById("w3c"));
+    console.log("Congratulation, you won/Congratulazioni hai vinto");
+
+    congratulation = document.createElement("p");
+    congratulation.innerText = "Congratulation, you won/Congratulazioni hai vinto";
+    congratulation.className = "winner"
+    document.getElementById("congratulations").appendChild(congratulation);
+    coordinates = document.createElement("p");
+    coordinates.innerText = "Coordinates/Coordinate: " + " INSERT COORDINATES HERE";
+    coordinates.className = "coordinates"
+    document.getElementById("congratulations").appendChild(coordinates);
 }

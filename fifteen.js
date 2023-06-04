@@ -9,7 +9,7 @@ let freeTile;
 let movable = []; //makes a lot easier to change css and check if those tiles can be moved
 
 function shuffle(){
-    let cicles = 1, tileIndex;
+    let cicles = Math.random() * 1000, tileIndex;
     //single moves, random
     for (let i = 0; i <cicles ; i++) {
         tileIndex = parseInt(Math.random() * movable.length);
